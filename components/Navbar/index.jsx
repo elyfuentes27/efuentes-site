@@ -12,7 +12,7 @@ const Navbar = () => {
     setMenu(!menu);
   };
   return (
-    <div className='fixed w-full h-20 shadow-xl shadow-violet z-[100]'>
+    <div className='fixed w-full h-20 shadow-xl shadow-blue z-[100]'>
       <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
         {/* <Image
           src='/../public/assets/navLogo.png'
@@ -20,7 +20,7 @@ const Navbar = () => {
           width='125'
           height='50'
         /> */}
-        <h2 className='italic ml-4 uppercase text-violet'>Fuentes</h2>
+        <h2 className='italic ml-4 uppercase text-blue'>Fuentes</h2>
         <div>
           <ul className='hidden md:flex'>
             <Link href='/'>
@@ -76,9 +76,9 @@ const Navbar = () => {
         >
           <div>
             <div className='flex justify-between items-center'>
-              <h2 className='italic ml-4 uppercase text-violet'>Fuentes</h2>
+              <h2 className='italic ml-4 uppercase text-blue'>Fuentes</h2>
               <div
-                className='rounded-full shadow-lg shadow-violet p-3 cursor-pointer'
+                className='rounded-full shadow-lg shadow-blue p-3 cursor-pointer'
                 onClick={handleMenu}
               >
                 <AiOutlineClose />
@@ -110,18 +110,25 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className='pt-40'>
-              <p className='uppercase tracking text-violet'>Let's Connect</p>
+              <p className='uppercase tracking text-blue'>Let's Connect</p>
               <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
-                <div className='rounded-full shadow-lg shadow-violet p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaLinkedinIn />
-                </div>
-                <div className='rounded-full shadow-lg shadow-violet p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
-                  <FaGithub />
-                </div>
-                <div className='rounded-full shadow-lg shadow-violet p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <a
+                  href='https://www.linkedin.com/in/ely-fuentes-856297165/'
+                  target='_blank'
+                >
+                  <div className='rounded-full shadow-lg shadow-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaLinkedinIn />
+                  </div>
+                </a>
+                <a href='https://github.com/elyfuentes27' target='_blank'>
+                  <div className='rounded-full shadow-lg shadow-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                    <FaGithub />
+                  </div>
+                </a>
+                <div className='rounded-full shadow-lg shadow-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <AiOutlineMail />
                 </div>
-                <div className='rounded-full shadow-lg shadow-violet p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                <div className='rounded-full shadow-lg shadow-blue p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
                   <BsFillPersonLinesFill />
                 </div>
               </div>
