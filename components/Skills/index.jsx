@@ -3,31 +3,31 @@ import SkillCards from '../SkillCards';
 const skills = [
   {
     name: 'html',
-    imUrl: '/../public/assets/skills/html.png',
+    imUrl: '/assets/skills/html.png',
   },
   {
     name: 'css',
-    imUrl: '/../public/assets/skills/css.png',
+    imUrl: '/assets/skills/css.png',
   },
   {
     name: 'tailwind',
-    imUrl: '/../public/assets/skills/tailwind.png',
+    imUrl: '/assets/skills/tailwind.png',
   },
   {
     name: 'Javascript',
-    imUrl: '/../public/assets/skills/javascript.png',
+    imUrl: '/assets/skills/javascript.png',
   },
   {
     name: 'Node',
-    imUrl: '/../public/assets/skills/node.png',
+    imUrl: '/assets/skills/node.png',
   },
   {
     name: 'React',
-    imUrl: '/../public/assets/skills/react.png',
+    imUrl: '/assets/skills/react.png',
   },
   {
     name: 'github',
-    imUrl: '/../public/assets/skills/github1.png',
+    imUrl: '/assets/skills/github1.png',
   },
 ];
 
