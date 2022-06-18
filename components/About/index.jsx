@@ -23,6 +23,7 @@ const About = () => {
     return (
       <>
         <div
+          id='about'
           className='w-full md:h-screen p-2 flex items-center py-16'
           ref={revealContainer}
         >
@@ -47,8 +48,11 @@ const About = () => {
                 digital experiences at Upstatement for a variety of clients.{' '}
               </p>
             </div>
-            <div className='w-full h-auto m-auto shadow-xl shadow-blue rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300'>
-              <img src='/assets/elyfuentes.jpg' className='rounded-xl' />
+            <div className='w-auto h-[70%] m-auto shadow-xl shadow-blue rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300'>
+              <img
+                src='/assets/elyfuentes.jpg'
+                className='rounded-xl h-[100%]'
+              />
             </div>
           </div>
         </div>
