@@ -23,7 +23,7 @@ const Contact = () => {
               <div>
                 <h2 className='py-2'>Ely Fuentes</h2>
                 <p>Software Engineer</p>
-                <p className='py-4'>Contact me and Let's Talk</p>
+                <p className='py-4'>Contact me and Let&#39;s Talk</p>
               </div>
               <div>
                 <p className='uppercase pt-8'>Connect with me :</p>
@@ -31,12 +31,17 @@ const Contact = () => {
                   <a
                     href='https://www.linkedin.com/in/ely-fuentes-856297165/'
                     target='_blank'
+                    rel='noreferrer'
                   >
                     <div className='rounded-full shadow-lg shadow-blue p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaLinkedinIn />
                     </div>
                   </a>
-                  <a href='https://github.com/elyfuentes27' target='_blank'>
+                  <a
+                    href='https://github.com/elyfuentes27'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
                     <div className='rounded-full shadow-lg shadow-blue p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
                       <FaGithub />
                     </div>

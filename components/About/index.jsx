@@ -38,14 +38,14 @@ const About = () => {
                 with a demonstrated history of working in the computer software
                 industry. Skilled in Node.js, Software Development, JavaScript,
                 React js - Web Development. Strong engineering professional with
-                a Bachelor's degree focused in Computer Science from Southern
-                Adventist University.
+                a Bachelor&#39;s degree focused in Computer Science from
+                Southern Adventist University.
               </p>
               <p className='py-2 text-light-gray'>
                 I have had the privilage to work for many great company that
                 have tought me how to beccome a better Developer. My main focus
                 these days is building accessible, inclusive products and
-                digital experiences at Upstatement for a variety of clients.{' '}
+                digital experiences at Upstatement for a variety of clients.
               </p>
             </div>
             <div className='w-auto h-[70%] m-auto shadow-xl shadow-blue rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300'>
