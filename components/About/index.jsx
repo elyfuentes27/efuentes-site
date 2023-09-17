@@ -43,7 +43,7 @@ const About = () => {
               </p>
               <p className='py-2 text-light-gray'>
                 I have had the privilage to work for many great company that
-                have tought me how to beccome a better Developer. My main focus
+                have tought me how to become a better Developer. My main focus
                 these days is building accessible, inclusive products and
                 digital experiences at Upstatement for a variety of clients.
               </p>
