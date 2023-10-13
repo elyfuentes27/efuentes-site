@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { srConfig } from '../../next.config';
 // import sr from '../../utils/sr';
-// import sr from 'scrollreveal';
-import { usePrefersReducedMotion } from '../../hooks';
 
 const About = () => {
   const revealContainer = useRef(null);
@@ -42,10 +40,7 @@ const About = () => {
                 Southern Adventist University.
               </p>
               <p className='py-2 text-light-gray'>
-                I have had the privilage to work for many great company that
-                have tought me how to become a better Developer. My main focus
-                these days is building accessible, inclusive products and
-                digital experiences at Upstatement for a variety of clients.
+I have been fortunate enough to work with several outstanding companies that have significantly contributed to my growth as a developer. Currently, my primary focus lies in crafting accessible and inclusive products as well as digital experiences at Upstatement, catering to a diverse range of clients.
               </p>
             </div>
             <div className='w-auto h-[70%] m-auto shadow-xl shadow-blue rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300'>

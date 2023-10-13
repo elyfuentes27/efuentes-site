@@ -13,12 +13,12 @@ const PersonalProjects = () => {
           <ProjectItems
             title='Netflix'
             backgroundImg={netflix}
-            projectUrl='/netflix'
+            projectUrl='https://netlix-partial-clone.vercel.app/'
           />
           <ProjectItems
             title='StarWar'
             backgroundImg={starWar}
-            projectUrl='/starWar'
+            projectUrl='https://vercel.com/elyfuentes27/star-wars-planet'
           />
         </div>
       </div>

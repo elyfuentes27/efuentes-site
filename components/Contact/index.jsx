@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 const Contact = () => {
-  return (
+  // const [name , setName ] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [message, setMessage] = useState('')
+// const [data, setDate] = useState(
+//   {
+//     name: '',
+//     email: '',
+//     message: ''
+//   }
+// )
+
+const {
+  register,
+  handleSubmit,
+  formState: { isSubmitting },
+  reset,
+} = useForm();
+
+async function onSubmit(formData) { 
+  await fetch('/api/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    }),
+  }).then(() => {
+    // Toast notification
+    toast.success('Your email message has been sent successfully');
+  });
+
+  reset();
+}
+   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full'>
         <p className='text-xl tracking-widest uppercase text-blue'>Contact</p>
@@ -59,39 +98,43 @@ const Contact = () => {
           {/* Right Side  */}
           <div className='col-span-3 w-full h-auto shadow-xl shadow-blue rounded-xl lg:p4'>
             <div className='p-4'>
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Name</label>
+                    <label className='uppercase text-sm py-2 text-white'>Name</label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-medium-gray'
+                      className='border-2 rounded-lg p-3 flex border-medium-gray text-blue'
                       type='text'
+                      {...register('name')}
                     />
                   </div>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2'>Number</label>
+                    <label className='uppercase text-sm py-2 text-white'>Number</label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-medium-gray'
+                      className='border-2 rounded-lg p-3 flex border-medium-gray text-blue'
                       type='text'
+                      {...register('phone')}
                     />
                   </div>
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Email</label>
                   <input
-                    className='border-2 rounded-lg p-3 flex border-medium-gray'
+                    className='border-2 rounded-lg p-3 flex border-medium-gray text-blue'
                     type='email'
+                    {...register('email')}
                   />
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
                   <textarea
-                    className='border-2 rounded-lg p-3 flex border-medium-gray'
+                    className='border-2 rounded-lg p-3 flex border-medium-gray text-blue'
                     rows='10'
+                    {...register('message')}
                   ></textarea>
                 </div>
                 <div>
-                  <button className='w-full p-4 bg-gradient-to-r from-blue-400 to-blue-300 hover:from-blue text-white font-bold shadow-none rounded'>
+                  <button type="submit" className='w-full p-4 bg-gradient-to-r from-blue-400 to-blue-300 hover:from-blue text-white font-bold shadow-none rounded'>
                     Send Message
                   </button>
                 </div>
