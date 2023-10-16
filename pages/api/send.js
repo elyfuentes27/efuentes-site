@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { NextRequest, NextResponse } from 'next/server';
+import {  NextResponse } from 'next/server';
 import { EmailTemplate } from '../../components/EmailTemplate';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -13,12 +13,8 @@ export default async function POST( req, res) {
       subject: `${name} has a message!`,
       react: EmailTemplate({ name, email, message }),
     });
-    if (data.status === 'success') {
-      return NextResponse.json({ message: 'Email successfully Sent!' });
-    }
-    console.log('res', res.json(data))
-    return res.json(data);
+    res.status(200).json(data);
   } catch (error) {
-    return NextResponse.json({ error });
+    res.status(400).json(error);
   }
 }
