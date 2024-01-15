@@ -1,8 +1,9 @@
 
 export const EmailTemplate = ({
-  firstName,
+  name, email, message 
 }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <h1>Email from, {name} - {email}!</h1>
+    <p>{message}</p>
   </div>
 );
